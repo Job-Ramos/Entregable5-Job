@@ -38,7 +38,7 @@ const HomePage = () => {
         </form>
     </div>
     </div>
-     <button className='container__but'><button className='but'></button></button>
+    
     
      </>
   )
