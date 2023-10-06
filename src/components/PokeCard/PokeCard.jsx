@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import useFetch from "../../hooks/useFetch"
 import { useNavigate } from "react-router-dom"
-import './styles/pokecard.css'
+import './styles/PokeCard.css'
 
 const PokeCard = ({url}) => {
 
@@ -33,13 +33,15 @@ const firstType = pokemon?.types[0].type.name
             ))
           }
         </ul>
-        <hr className="pokecard__hr" />
+       
+        
         <ul  className="pokecard__stats">
           {
             pokemon?.stats.map(statInfo => (
               <li className="pokecard__stat" key={statInfo.stat.url}>
                 <span className="pokecard__stat__name">{statInfo.stat.name}</span>
-                <span className={`pokecard__stat__value ${firstType}-color`}>{statInfo.base_stat}</span>
+                <span className={`pokecard__stat__value ${firstType}-color`}>
+                  {statInfo.base_stat}</span>
               </li>
             ))
           }

@@ -20,7 +20,7 @@ const HomePage = () => {
  }
 
   return (
-    <>
+    
     <div className='container_1p'>
     <img className='Homepage__img' src="images/poke.png" alt="" />
     <div className='Homepage'>
@@ -40,7 +40,7 @@ const HomePage = () => {
     </div>
     
     
-     </>
+    
   )
 }
 
