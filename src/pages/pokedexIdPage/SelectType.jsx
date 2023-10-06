@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import useFetch from "../../hooks/useFetch"
 
-const SelectType = ({setypeSelected}) => {
+const SelectType = ({setTypeSelected}) => {
 
     const url = `https://pokeapi.co/api/v2/type`
     const [types, getTypes] = useFetch(url)
@@ -13,12 +13,12 @@ const SelectType = ({setypeSelected}) => {
     console.log(types);
 
     const handeleChange = e => {
-        setypeSelected(e.target.value); 
+        setTypeSelected(e.target.value);
     }
 
   return (
-    <select onChange={ handeleChange}>
-     <option value="allPokemons">all pokemons</option>
+    <select className="all__pokemons" onChange={ handeleChange}>
+     <option value="allPokemons">All pokemons</option>
         {
             types?.results.map(typeInfo => (
                 <option key={typeInfo.url} value={typeInfo.url}>{typeInfo.name}</option>

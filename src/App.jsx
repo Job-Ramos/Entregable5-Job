@@ -11,7 +11,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className='container__body'>
       <Routes>
        <Route path='/' element={<HomePage/>}/>
        <Route element={<ProtectedRoutes />}>

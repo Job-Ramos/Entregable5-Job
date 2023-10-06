@@ -11,8 +11,8 @@ const getApi =() => {
       .catch(err => console.log(err))
 }
 
-const getTypeApi =(urltype) => {
-  axios.get(urltype)
+const getTypeApi =(urlType) => {
+  axios.get(urlType)
     .then(res => {
      res.data
      const obj ={

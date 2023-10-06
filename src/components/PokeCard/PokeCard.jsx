@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import useFetch from "../../hooks/useFetch"
-import { Navigate, useNavigate } from "react-router-dom"
-
+import { useNavigate } from "react-router-dom"
+import './styles/pokecard.css'
 
 const PokeCard = ({url}) => {
 
@@ -17,27 +17,29 @@ const handleNegative = () =>{
   negative(`/pokedex/${pokemon.id}`)
 }
 
+const firstType = pokemon?.types[0].type.name
+
   return (
-    <article  onClick={handleNegative}>
-      <header>
-        <img src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
+    <article className={`pokecard ${firstType}-border`} onClick={handleNegative}>
+      <header className={`pokecard__header ${pokemon?.types[0].type.name}-gradient`}>
+        <img className="pokecard__image" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
       </header>
-      <section>
-        <h3>{pokemon?.name}</h3>
-        <ul>
+      <section className="pokecard__body">
+        <h3 className={`pokecard__name $(firstType)-color`}>{pokemon?.name}</h3>
+        <ul className="pokecard__types">
           {
             pokemon?.types.map(typeInfo => (
-              <li key={typeInfo.type.url}>{typeInfo.type.name}</li>
+              <li className="pokecard__typename" key={typeInfo.type.url}>{typeInfo.type.name}</li>
             ))
           }
         </ul>
-        <hr />
-        <ul>
+        <hr className="pokecard__hr" />
+        <ul  className="pokecard__stats">
           {
             pokemon?.stats.map(statInfo => (
-              <li key={statInfo.stat.url}>
-                <span>{statInfo.stat.name}</span>
-                <span>{statInfo.base_stat}</span>
+              <li className="pokecard__stat" key={statInfo.stat.url}>
+                <span className="pokecard__stat__name">{statInfo.stat.name}</span>
+                <span className={`pokecard__stat__value ${firstType}-color`}>{statInfo.base_stat}</span>
               </li>
             ))
           }

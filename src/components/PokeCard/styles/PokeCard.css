@@ -1,0 +1,265 @@
+.container__pokecard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    position: absolute;
+    margin: 20em 1em;
+}
+
+
+.pokecard {
+    width: 100%;
+    max-width: 490px;
+    border-radius:0.7em ;
+    border: 0.7em  solid #ccc;
+    cursor: pointer;
+    transition:transform 150ms ease;
+}
+
+.pokecard:hover {
+    transform: scale(1.03);
+}
+
+.pokecard__header {
+    background-color: #999;
+    aspect-ratio: 2;
+    position: relative;
+}
+.pokecard__image {
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    top:1.5em;
+}
+.pokecard__body {
+    padding: 3.5em 1em 2em;
+    background-color: white;
+}
+
+.pokecard__name {
+    text-align: center;
+    text-transform:capitalize;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+}
+
+.pokecard__types {
+    display: flex;
+    justify-content: center;
+    gap:1em;
+    margin-bottom: 1em;
+}
+.pokecard__typecard {
+    text-transform: capitalize;
+}
+.pokecard__typename:nth-child(2)::before {
+    content: '/';
+    padding-right:0.7em ;
+
+}
+.pokecard__hr {
+    margin-bottom: 1em;
+    border: 1px solid #ccc4
+}
+
+.pokecard__stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items:center ;
+    gap: 1em 0.2em;
+}
+
+.pokecard__stat {
+    display: grid;
+    gap: 0.3em;
+    justify-items: center;
+}
+.pokecard__stat__name {
+    font-size: 0.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.pokecard__stat__value {
+    font-weight:500 ;
+    font-size: 1em;
+}
+
+/* FIRE */
+.fire-gradient {
+     background: linear-gradient(176deg, #F96D6F 9%, #E35825 27%, #E8AE1B 60%);
+}
+.fire-border{
+   border-color: #E6901E ;
+}
+.fire-color {
+   color: #E6901E; 
+}
+
+/* GRASS */
+.grass-gradient{
+    background: linear-gradient(179deg, #7EC6C5 0%, #ABDAC6 48%, #CAE099 100%);
+}
+.grass-border{
+    border-color:  #B1DBBC ;
+ }
+ .grass-color {
+    color: #416460;; 
+ }
+
+ /* POISON */
+.poison-gradient{
+    background: linear-gradient(182deg, #735259 24%, #BC6B7C 75%, #7C3F4C 100%);
+}
+.poison-border{
+    border-color: #735259 ;
+ }
+ .poison-color {
+    color: #735259; 
+ }
+
+/* WATER */
+.water-gradient{
+    background: linear-gradient(180deg, #133258 0%, #1479FB 44%, #82B2F1 100%);
+}
+.water-border{
+    border-color:  #83B9FF;
+ }
+ .water-color {
+    color: #1479FB;; 
+ }
+
+/* BUG */
+.bug-gradient {
+    background: linear-gradient(178deg, #62DB60 12%, #3BB039 37%, #AAFFA8 100%);
+}
+.bug-border{
+    border-color: #4AB648 ;
+ }
+ .bug-color {
+    color: #4AB648; 
+ }
+
+
+.normal-gradient{
+    background: linear-gradient(182deg, #735259 24%, #BC6B7C 75%, #7C3F4C 100%);
+} 
+.normal-border{
+    border-color: #735259;
+ }
+ .normal-color {
+    color: #735259; 
+ }
+
+.flying-gradient {
+    background: linear-gradient(182deg, #735259 24%, #BC6B7C 75%, #7C3F4C 100%);
+}
+.flying-border{
+    border-color: #E6901E ;
+ }
+ .flying-color {
+    color: #E75C35; 
+ }
+
+.fighting-gradient {
+    background: linear-gradient(177deg, #96402A 0%, #F1613C 71%, #CB735D 100%);
+}
+.fighting-border{
+    border-color:  #96402A ;
+ }
+ .fighting-color {
+    color: #96402A; 
+ }
+
+.ground-gradient {
+    background: linear-gradient(180deg, #654008 0%, #895C1A 23%, #D69638 58%);
+}
+.ground-border{
+    border-color: #654008 ;
+ }
+ .ground-color {
+    color: #654008; 
+ }
+
+.rock-gradient {
+ background: linear-gradient(177deg, #7E7E7E 0%, #8D8D94 27%, #D3D3D3 58%);
+}
+.rock-border{
+    border-color:#7E7E7E  ;
+ }
+ .rock-color {
+    color: #7E7E7E; 
+ }
+
+.ghost-gradient {
+    background: linear-gradient(177deg, #323569 0%, #454AA8 27%, #787DDA 58%);
+}.ghost-border{
+    border-color: #323569;
+ }
+ .ghost-color {
+    color: #323569; 
+ }
+
+.electric-gradient {
+    background: linear-gradient(180deg, #0C1395 0%, #2B319B 23%, #7075D9 58%);
+}
+.electric-border{
+    border-color:#0C1395 ;
+ }
+ .electric-color {
+    color: #0C1395; 
+ }
+
+.psychic-gradient {
+    background: linear-gradient(180deg, #5E736C 0%, #728881 23%, #A8A8A8 58%);
+}
+.psychic-border{
+    border-color:#5E736C ;
+ }
+ .psychic-color {
+    color: #5E736C; 
+ }
+
+.ice-gradient {
+    background: linear-gradient(177deg, #6FBEDF 0%, #64CBF5 23%, #BDEBFE 58%);
+}
+.ice-border{
+    border-color: #83B9FF ;
+ }
+ .ice-color {
+    color: #1479FB; 
+ }
+ /* falta */
+.dragon-gradient {
+    background: linear-gradient(177deg, #6FBEDF 0%, #64CBF5 23%, #BDEBFE 58%);
+}
+.dragon-border{
+    border-color: #6FBEDF ;
+ }
+ .dragon-color {
+    color: #6FBEDF; 
+ }
+
+.dark-gradient {
+    background: linear-gradient(177deg, #030706 0%, #0D1211 27%, #5A5E5D 58%);
+}
+.dark-border{
+    border-color: #0B0E0D ;
+ }
+ .dark-color {
+    color: #030706; 
+ }
+
+.fairy-gradient {
+    background: linear-gradient(180deg, #971B45 0%, #C23867 23%, #CD7D98 58%);
+}.fairy-border{
+    border-color: #971B45 ;
+ }
+ .fairy-color {
+    color: #971B45; 
+ }
